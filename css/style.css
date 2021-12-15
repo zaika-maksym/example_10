@@ -1,0 +1,821 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: inherit;
+}
+
+.button {
+  display: flex;
+  /* display: none; */
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  padding-left: 4px;
+  padding-right: 3px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+  font-size: 11px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-family: Merriweather, sans-serif;
+  font-weight: 600;
+  background: var(--personal-info-background);
+  /* background: linear-gradient(to right, #ffffff, #96becf); */
+  /* color: #000000; */
+  transition: ease-in-out 0.2s;
+}
+
+.button:hover {
+  box-shadow: 0 0 3px 2px #96becf;
+  transition: ease-in-out 0.2s;
+}
+
+.box-shadow {
+  box-shadow: 0 0 5px 5px #000000;
+}
+
+:root {
+  --aside-background-color-name: #f3e9e8;
+  --aside-background-color-info: #c7e5ff;
+  --personal-info-background: #c7e5ff;
+  --subtitle-color: #5f5e5f;
+}
+
+/*<div class="download-pdf">
+    <a class="button" href="./лаура_берлін.pdf" download>завантажити резюме
+      <img src="./img/download_white.svg" alt="download_pic">
+    </a>
+  </div>
+*/
+
+/* @media screen and (min-width: 320px) and (max-width: 768px) { */
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 99%;
+    margin: auto;
+    background-color: var(--aside-background-color-name);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__name {
+    font-family: Manrope;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: solid 3px #ffffff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+    line-height: 35px;
+  }
+
+  .header__img {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid 3px #ffffff;
+  }
+
+  .main-info {
+    background-color: #bcd3ec;
+    border-radius: 5px;
+  }
+
+  .title__style {
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .nav-info__style {
+    text-align: left;
+  }
+
+  .subtitle-side-info__style {
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .main-text__style {
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .nav-info__style {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: auto;
+  }
+  .interests__item {
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+    margin: auto;
+  }
+  .interests__item::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    margin-right: 5px;
+    background-color: #000000;
+  }
+
+  .languages__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .languages__list {
+    margin-bottom: 30px;
+  }
+
+  .svg-box-size {
+    display: flex;
+  }
+
+  .svg-item__size {
+    display: block;
+    margin-left: 3px;
+    width: 13px;
+    height: 13px;
+    fill: #000000;
+  }
+
+  .svg-item__color {
+    fill: #5f5e5f;
+  }
+
+  .main-about {
+    padding: 10px;
+    padding-bottom: 0px;
+  }
+
+  .main-about::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 20px;
+  }
+
+  .main-about__text {
+    text-align: justify;
+  }
+
+  .main-subtitle__style {
+    margin-top: 10px;
+  }
+
+  .experience-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .experience-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .list_style {
+    list-style-type: disc;
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+
+  .education-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .education-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .achieved-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .achieved-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .skills-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .skills-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .skills__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 395px;
+    margin: auto;
+  }
+
+  .skills__list {
+    margin-bottom: 30px;
+  }
+
+  .recommendation-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .auto-margin {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* .languages__item::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    display: block;
+    margin-right: 5px;
+    background-color: #000000;
+  } */
+}
+
+@media screen and (min-width: 480px) and (max-width: 769px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    max-width: 99%;
+    margin: auto;
+    background-color: var(--aside-background-color-name);
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__name {
+    font-family: Manrope;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: solid 3px #ffffff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .header__img {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid 3px #ffffff;
+  }
+
+  .main-info {
+    background-color: #bcd3ec;
+    border-radius: 5px;
+  }
+
+  .title__style {
+    font-family: Manrope;
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  .nav-info__style {
+    text-align: left;
+  }
+
+  .subtitle-side-info__style {
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .main-text__style {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .nav-info__style {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    margin: auto;
+  }
+  .interests__item {
+    display: flex;
+    align-items: center;
+    max-width: 395px;
+    margin: auto;
+  }
+  .interests__item::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    margin-right: 5px;
+    background-color: #000000;
+  }
+
+  .languages__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 395px;
+    margin: auto;
+  }
+
+  .languages__list {
+    margin-bottom: 30px;
+  }
+
+  .svg-box-size {
+    display: flex;
+  }
+
+  .svg-item__size {
+    display: block;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px;
+    fill: #000000;
+  }
+
+  .svg-item__color {
+    fill: #5f5e5f;
+  }
+  .main-about {
+    padding: 10px;
+    padding-bottom: 0px;
+  }
+
+  .main-about::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 20px;
+  }
+
+  .main-about__text {
+    text-align: justify;
+  }
+
+  .main-subtitle__style {
+    margin-top: 10px;
+  }
+
+  .experience-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .experience-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .list_style {
+    list-style-type: disc;
+    margin-top: 10px;
+    margin-left: 18px;
+  }
+
+  .education-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .education-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .achieved-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .achieved-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .skills-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .skills-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .skills__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 395px;
+    margin: auto;
+  }
+
+  .skills__list {
+    margin-bottom: 30px;
+  }
+
+  .recommendation-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .auto-margin {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 770px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .personal-info {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .aside-personal-info {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+
+    background-color: var(--aside-background-color-name);
+    border-radius: 5px;
+  }
+
+  .header {
+    display: flex;
+    width: 680px;
+    margin: auto;
+  }
+
+  .header-box {
+    display: flex;
+    position: absolute;
+    border: solid 2px #000000;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .header__img {
+    display: none;
+    width: 66px;
+    height: 69px;
+  }
+  .header__name::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    max-height: 99%;
+    max-width: 99%;
+    background-image: url(../img/crop768.jpg);
+    background-size: cover;
+    margin-right: 70px;
+    border-right: solid 2px black;
+  }
+  .header__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Manrope;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-right: 70px;
+    background-color: #ffffff;
+  }
+
+  .title__style {
+    font-family: Manrope;
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 13px;
+    letter-spacing: 3px;
+  }
+
+  .nav-info__style {
+    text-align: left;
+  }
+
+  .subtitle-side-info__style {
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .main-text__style {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .nav-info__style {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    margin: auto;
+  }
+  .interests__item {
+    display: flex;
+    align-items: center;
+    max-width: 395px;
+    margin: auto;
+  }
+  .interests__item::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    margin-right: 5px;
+    background-color: #000000;
+  }
+
+  .languages__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 395px;
+    margin: auto;
+  }
+
+  .languages__list {
+    margin-bottom: 30px;
+  }
+
+  .svg-box-size {
+    display: flex;
+  }
+
+  .svg-item__size {
+    display: block;
+    margin-left: 3px;
+    width: 15px;
+    height: 15px;
+    fill: #000000;
+  }
+
+  .svg-item__color {
+    fill: #5f5e5f;
+  }
+
+  .main-info {
+    display: flex;
+    flex-direction: column;
+    width: 385px;
+    background-color: #bcd3ec;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+
+  .main-about {
+    margin-top: 105px;
+    padding: 10px;
+    padding-bottom: 0px;
+  }
+
+  .main-about::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 20px;
+  }
+
+  .main-about__text {
+    text-align: justify;
+  }
+
+  .main-subtitle__style {
+    margin-top: 10px;
+  }
+
+  .experience-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .experience-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .list_style {
+    list-style-type: disc;
+    margin-top: 10px;
+    margin-left: 18px;
+  }
+
+  .education-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .education-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .achieved-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .achieved-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .skills-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .skills-info::after {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--aside-background-color-name);
+    margin-top: 10px;
+  }
+
+  .skills__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 395px;
+    margin: auto;
+  }
+
+  .skills__list {
+    margin-bottom: 30px;
+  }
+
+  .recommendation-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .auto-margin {
+    display: flex;
+    justify-content: space-between;
+  }
+}
